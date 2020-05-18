@@ -3,16 +3,30 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WelcomePageComponent } from './components/welcome-page/welcome-page.component';
+import { SharedModule } from './components/shared/shared.module';
+import { ApiService } from './services/api.service';
+import { ManufacturerService } from './services/manufacturer.service';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomePageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    RouterModule,
+    HttpClientModule,
+    
   ],
-  providers: [],
+  providers: [ApiService, ManufacturerService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

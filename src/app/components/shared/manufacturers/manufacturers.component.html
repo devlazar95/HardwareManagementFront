@@ -1,0 +1,22 @@
+<div class="d-flex flex-column">
+    <div class="col-12 pt-5 pb-5">
+        <h3 class="text-center text-secondary">PROIZVOĐAČI</h3>
+        <div *ngFor="let manufacturer of manufacturers">
+            <div class="row p-4">
+                <div class="card w-100 card-hover-special">
+                    <div class="card-header bg-dark">
+                        <h4 class="text-light text-uppercase">{{manufacturer.name}}</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row pl-3">
+                            <p class="text-secondary font-weight-bold min-width-100">Lokacija:</p><p class="ml-3">{{manufacturer.location}}</p>
+                        </div>
+                        <div class="row pl-3">
+                            <p class="text-secondary font-weight-bold min-width-100">Website:</p><a href="{{manufacturer.website}}" class="ml-3">{{manufacturer.website}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

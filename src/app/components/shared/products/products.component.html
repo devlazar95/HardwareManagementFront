@@ -1,0 +1,25 @@
+<div class="d-flex flex-column">
+    <div class="col-12 pt-5 pb-5">
+        <h3 class="text-center text-secondary text-uppercase">Proizvodi</h3>
+        <div *ngFor="let product of products">
+            <div class="row p-4">
+                <div class="card w-100 card-hover-special">
+                    <div class="card-header bg-dark">
+                        <h4 class="text-light text-uppercase">{{product.name}}</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row pl-3">
+                            <p class="text-secondary font-weight-bold min-width-100">Naziv:</p><p class="ml-3">{{product.name}}</p>
+                        </div>
+                        <div class="row pl-3">
+                            <p class="text-secondary font-weight-bold min-width-100">Serijski broj:</p><a href="" class="ml-3">{{product.serial_number}}</a>
+                        </div>
+                        <div class="row pl-3">
+                            <p class="text-secondary font-weight-bold min-width-100">Opis: </p><p class="ml-3 width-20">{{product.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

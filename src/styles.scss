@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.full-div {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100vh;
+    background-image: url('./assets/images/welcome/welcome.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-footer{
+    a{
+        color: white;
+    }
+}
+
+.card-hover-special:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+    transition: .3s;
+}
+
+.width-20{
+    width: 22%;
+}
+
+.min-width-100{
+    min-width: 100px !important;
+}
