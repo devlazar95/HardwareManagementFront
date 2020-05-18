@@ -10,4 +10,8 @@ export class ProductService {
     getAllProducts(): Observable<any>{
       return this._apiService.get('api/products');
     }
+
+    getProductByID(productID: number): Observable<any>{
+      return this._apiService.getByID(productID, 'api/products')
+    }
 }

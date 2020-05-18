@@ -12,4 +12,7 @@ export class ApiService {
     return this._httpClient.get(this.baseUrl+endPointURL);
   }
   
+  getByID(id:number, endPointURL:string): Observable<any>{
+    return this._httpClient.get(this.baseUrl+endPointURL+"/"+id+"/");
+  }
 }

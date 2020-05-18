@@ -1,0 +1,26 @@
+<app-nav-menu></app-nav-menu>
+
+<main class="container-fluid main-container p-5 d-flex align-items-center">
+    <div class="container-fluid mt-5 ">
+        <div class="d-flex flex-lg-row flex-md-row flex-sm-column">
+            <div class="col-6 d-flex justify-content-center">
+                <img src="../../../../assets/images/other/img-{{productID}}.jpg" alt="img" width="60%">
+            </div>
+            <div class="col-6">
+                <div class="column">
+                    <h4 class="text-secondary text-uppercase mb-5">{{specificProduct.name}}</h4>
+                    <div class="d-flex flex-row">
+                        <span class="font-weight-bold mr-3 min-width-100">Serijski broj:</span><p>{{specificProduct.serial_number}}</p>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <span class="font-weight-bold mr-3 min-width-100">Opis:</span><p>{{specificProduct.description}}</p>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <span class="font-weight-bold mr-3 min-width-100">Skladište:</span><p>{{specificProduct.storage_unit}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

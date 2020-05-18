@@ -4,6 +4,7 @@ import { ManufacturersComponent } from './manufacturers/manufacturers.component'
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
+import { SpecificProductComponent } from './specific-product/specific-product.component';
 
 
 
@@ -12,7 +13,8 @@ import { ProductsComponent } from './products/products.component';
     ManufacturersComponent,
     NavMenuComponent,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    SpecificProductComponent
   ],
   imports: [
     CommonModule

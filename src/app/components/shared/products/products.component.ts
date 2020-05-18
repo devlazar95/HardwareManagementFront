@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -8,7 +9,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductsComponent implements OnInit {
   products: any;
-  constructor(private readonly _productService: ProductService) { }
+  constructor(private readonly _productService: ProductService, private _router: Router) { }
 
   ngOnInit() {
     this.init();
@@ -24,4 +25,10 @@ export class ProductsComponent implements OnInit {
     })
   }
 
+  showSpecificProduct(productID: any){
+    this._router.navigate(["specific-product/"], {
+      queryParams: { productID: productID }
+    });
+    console.log(productID);
+  }
 }
