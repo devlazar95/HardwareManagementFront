@@ -1,5 +1,7 @@
+<app-nav-menu *ngIf="router.url == '/manufacturers'"></app-nav-menu>
 <div class="d-flex flex-column">
     <div class="col-12 pt-5 pb-5">
+        <button type="button" class="btn btn-dark text-light btn-lg" (click)="addNewManufacturer(content)">Dodaj</button>
         <h3 class="text-center text-secondary">PROIZVOĐAČI</h3>
         <div *ngFor="let manufacturer of manufacturers">
             <div class="row p-4">
@@ -20,3 +22,29 @@
         </div>
     </div>
 </div>
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Dodaj proizvođača</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body pt-5 pb-5">
+        <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Website">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Lokacija">
+              </div>
+            </div>
+          </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-dismiss="modal" focus="true"
+            >ODUSTANI</button>
+        <button type="button" class="btn btn-primary" >OBRIŠI</button>
+    </div>
+</ng-template>
+<app-footer *ngIf="router.url == '/manufacturers'"></app-footer>

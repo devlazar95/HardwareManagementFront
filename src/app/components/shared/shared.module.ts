@@ -5,6 +5,9 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { SpecificProductComponent } from './specific-product/specific-product.component';
+import { StorageUnitsComponent } from './storage-units/storage-units.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -14,16 +17,20 @@ import { SpecificProductComponent } from './specific-product/specific-product.co
     NavMenuComponent,
     FooterComponent,
     ProductsComponent,
-    SpecificProductComponent
+    SpecificProductComponent,
+    StorageUnitsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule,
+    NgbModule,
   ],
   exports:[
     ManufacturersComponent,
     NavMenuComponent,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    StorageUnitsComponent
   ]
 })
 export class SharedModule { }

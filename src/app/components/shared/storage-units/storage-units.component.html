@@ -1,0 +1,21 @@
+<app-nav-menu></app-nav-menu>
+<main class="container-fluid main-container">
+    <div class="card-group mt-5">
+        <div class="card-deck card-columns col-auto mb-5" style="width: 25em" *ngFor="let storage of allStorageUnits">
+            <div class="container-fluid">
+                <div class="card special-card">
+                    <img class="card-img-top" src="../../../../assets/images/other/storage/storage.jpg"
+                        width="50%" alt="Card image cap">
+                    <div class="card-header bg-dark text-light text-header">
+                        <h5 class="card-title text-light text-center book-title text-uppercase">{{storage.abbr_code}}
+                        </h5>
+                    </div>
+                    <div class="card-body  bg-white">
+                        <p class="card-text"><i class="fas fa-thumbtack mr-2"></i>Lokacija: <span class="text-secondary">{{storage.location}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

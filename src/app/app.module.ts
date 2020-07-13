@@ -11,12 +11,15 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/product.service';
+import { StorageUnitService } from './services/storage-unit.service';
+import { ProductsPageComponent } from './components/products-page/products-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
-    HomeComponent
+    HomeComponent,
+    ProductsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { ProductService } from './services/product.service';
     HttpClientModule,
     
   ],
-  providers: [ApiService, ManufacturerService, ProductService],
+  providers: [ApiService, ManufacturerService, ProductService, StorageUnitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
